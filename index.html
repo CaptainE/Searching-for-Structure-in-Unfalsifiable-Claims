@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="PAPYER, Narrative">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PAPYER</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/papaya.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<div id="top" class="header">
+    <div style="padding-bottom: 32px; text-align: center;">
+        <a href="https://captaine.github.io">
+        <span class="icon">
+            <i class="fas fa-home"></i>
+        </span>
+        More Research
+        </a>
+    </div>
+</div>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Narrative Discovery in Social Media Discussions</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://captaine.github.io/">Peter Ebert Christensen</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://frederikwarburg.github.io/">Frederik Warburg</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://kmnp.github.io/">Menglin Jia</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://sergebelongie.github.io/">Serge Belongie</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Copenhagen,</span>
+            <span class="author-block"><sup>2</sup>Techical University of Denmark</span>
+            <span class="author-block"><sup>3</sup>Cornell University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="HCOMP_Narratives_SNaCK_final.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+                <!-- colab Link. -->
+                <span class="link-block">
+                    <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="fab fa-youtube"></i>
+                        </span>
+                        <span>Video</span>
+                    </a>
+                    </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/CaptainE/Narrative-Discovery-in-Social-Media-Discussions"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <embed src="teaser_hcomp.png" width="450px" height="300px" />
+      <!-- <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2> -->
+  </div>
+</section>
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="section">
+    <div class="container is-max-desktop">
+  
+      <!-- Breif intro. -->
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <div class="content has-text-justified">
+            <p>
+              We present PAPYER <img src="./static/images/papaya.png" alt="Simply Easy Learning" width="15"
+              height="6">, a dataset collected for narrative discovery in social media discussions using a human in the loop pipeline and a combination of human and machine kernels. 
+              Our method relies on SNaCK and compares favorably to prior topic modelling and transformer-based methods and discovers a low dimensional space of narratives revolving around hygiene in public restrooms using less than 30k triplets. 
+              Our long-term vision is analogous to Visipedia: we wish to capture and share human narratives in online discussions across a wide array of topics. 
+              The present work represents our first foray in this direction, with a deep dive into a single topic.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Breif intro. -->
+    </div>
+  </section>
+  
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="column is-full-width">
+            <hr style="height:2px;border-width:0;color:gray;background-color:gray;margin-top:-50px;"> 
+        </div>
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Social media platforms give rise to an abundance of posts and comments on every topic imaginable. 
+            Many of these posts express opinions on various aspects of society, but their unfalsifiable nature makes them ill-suited to fact-checking pipelines. 
+            Understanding and visualizing these narratives can facilitate more informed debates on social media.
+            As a first step towards systematically identifying the underlying narratives on social media, we introduce, PAPYER <img src="./static/images/papaya.png" alt="Simply Easy Learning" width="15"
+height="6">, a fine-grained dataset of online comments related to hygiene in public restrooms, which contains a multitude of unfalsifiable claims. We present a human-in-the-loop pipeline that uses a combination of machine and human kernels to discover the prevailing narratives and show that this pipeline outperforms recent large transformer models and state-of-the-art unsupervised topic models.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-full-width">
+
+                <hr style="height:2px;border-width:0;color:gray;background-color:gray;margin-top:-50px;"> 
+                <h2 class="title is-3">Visualizations</h2>
+                <h3 class="title is-4">Overview of the prevailing narratives</h3>
+                    <iframe src="taxon_labels_numbers.png" seamless style="width:1000px;height:562px;"></iframe>
+                <!-- Interpolating. -->
+                <h3 class="title is-4">T-SNE visualization of SNaCK embedding</h3>
+                    <iframe src="snack_2visualization.html" seamless style="width:1000px;height:500px;"></iframe>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <!-- narrative discovery. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+  
+          <hr style="height:2px;border-width:0;color:gray;background-color:gray;margin-top:-50px;"> 
+          <h2 class="title is-3">Narrative Discovery with SNaCK</h2>
+            
+          <div class="content has-text-justified">
+            <embed src="SNACK_embeddings_zoomed-1.png" width="962px" height="346px" />
+            <p>
+                Our human-in-the-loop pipeline works in the following 3 steps: first we initially embed the sentences using a transformer (T5 for example), second we sample two random sentences, one to be the anchor of a HIT and the other to be one of 5 additional text snippets that workers select from. The final 4 sentences are sampled based on the L2 distance of their transformer embedding to that of the anchor.
+                Third, we gather high quality triplets from Amazon mechanical turk and use them as human annotation to used to train the SNaCK embedding; see our paper for details.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ narrative discovery. -->
+  </section>
+  
+<section class="section">
+    <div class="container is-max-desktop">
+      <!-- human annotation. -->
+      <hr style="height:2px;border-width:0;color:gray;background-color:gray;margin-top:-50px;"> 
+        <div class="columns is-centered has-text-centered">
+
+        <!-- anchor to positive. -->
+      
+      <div class="column">
+        <div class="content">
+            
+          <h2 class="title is-3">Positive pairwise annotation</h2>
+          <embed src="circos_pos_final.png" width="450px" height="450px" />
+        </div>
+      </div>
+      <!--/ anchor to positive. -->
+
+      <!-- anchor to negative. -->
+      <div class="column">
+        <h2 class="title is-3">Negative pairwise annotation</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <embed src="circos_neg_final.png" width="450px" height="450px" />
+          </div>
+
+        </div>
+      </div>
+
+
+    <!--/ anchor to negative. -->
+
+        </div>
+
+
+        <div class="column is-full-width">
+            <div class="content has-text-justified">
+              <p>
+                Visualisation of human annotations. Each line represents a positive (left) or negative (right) human annotation for an
+                anchor. The histograms in the circumference describe the number of incoming connections. The color of the histogram describes
+                the class of the majority of incoming classes and the color of the lines describes the ground truth class of the anchor. If the
+                color of the histogram matches the above class color, then the pair belongs to the ground truth class, and if the colors differ
+                they do not. The numbers above the class color indicate the individual narrative classes. 
+              </p>
+            </div>
+          </div>
+
+    </div>
+      <!--/ human annotation. -->
+</section>
+
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <!-- Comparison. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+  
+          <hr style="height:2px;border-width:0;color:gray;background-color:gray;margin-top:-50px;"> 
+          <h2 class="title is-3">Comparison to Related Works</h2>
+          <embed src="ablation_table.png" width="465px" height="207px" />
+          <embed src="ablation.png" width="820px" height="325px" />
+          <div class="content has-text-justified">
+            
+            <p>
+                We compare our method (SNaCK) to LDA, T-SNE (using both BERT and T5 transformers) UMAP (using both BERT and T5 transformers) and LDA-transformer (contextualizing the topics using information form a transformer visualized using T-SNE).
+                Experiments are conducted on the PAPYER dataset and SNaCK achieves superior triplet generalization ratio, albeit resulting in a more noisy embedding than it's initial embedding.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Comparison. -->
+  </section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray;margin-top:-50px;"> 
+    <h2 class="title">Citation</h2>
+    <pre><code>@article{christensen2022PAPYER,
+  author    = {Christensen, Peter E. and Warburg, Frederik and Jia, Menglin and Belongie, Serge},
+  title     = {Narrative Discovery in Social Media Discussions},
+  journal   = {-},
+  year      = {2022},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="HCOMP_Narratives_SNaCK_final.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/captaine" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Correspondence to <a
+            href="https://captaine.github.io">Peter Ebert Christensen</a>. Website based on <a
+            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
