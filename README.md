@@ -5,8 +5,8 @@ Evaluation code of paper: ***Searching for Structure in Unfalsifiable Claims***
 ## Preparation
 
 ### Dataset
-We provide the PAPYER dataset, consisting of scaped sentence *sentence_list.pickle*, their similarity relaitions in form of triplets *
-triplets.obj* and  a datsetAmazon review dataset in *datasets* folder.
+We provide the PAPYER dataset, consisting of scaped sentences in *sentence_list.pickle*, their similarity relaitions in form of triplets in *
+triplets.obj* and their major claim class in *labels.obj*.
 
 ### Claim discovery
 We provide a script *PAPYER.ipynb* to cluster the text snippets to find their overall claim clusters.
