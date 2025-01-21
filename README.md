@@ -13,10 +13,13 @@ We provide a script *PAPYER.ipynb* to cluster the text snippets to find their ov
 
 ## Cite
 ```
-@article{christensen2022PAPYER,
-  author    = {Christensen, Peter E. and Warburg, Frederik and Jia, Menglin and Belongie, Serge},
-  title     = {Searching for Structure in Unfalsifiable Claims},
-  journal   = {arXiv preprint arXiv:2209.00495},
-  year      = {2022},
+@misc{christensen2022searchingstructureunfalsifiableclaims,
+      title={Searching for Structure in Unfalsifiable Claims}, 
+      author={Peter Ebert Christensen and Frederik Warburg and Menglin Jia and Serge Belongie},
+      year={2022},
+      eprint={2209.00495},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2209.00495}, 
 }
 ```
